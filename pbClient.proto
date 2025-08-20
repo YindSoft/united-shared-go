@@ -1,0 +1,33 @@
+syntax = "proto3";
+package pbClient;
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "/pbClient";
+
+message Envelope {
+  uint64 seq  = 1;
+  uint64 ack  = 2; 
+  uint32 type = 3;
+  bytes payload = 4;
+}
+
+
+message Login {
+  string username = 1;
+  string password = 2;
+}
+
+message Logout {
+  string username = 1;
+}
+
+message Talk {
+  string message = 1;
+}
+
+message Walk {
+  uint32 heading = 1;
+  uint32 x = 2;
+  uint32 y = 3;
+}
