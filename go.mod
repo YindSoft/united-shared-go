@@ -1,4 +1,4 @@
-module UnitedShared
+module github.com/YindSoft/united-shared-go
 
 go 1.24.0
 
